@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo de Uso de Funções em HTML</title>
+
+<style>
+    body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+        height: 100vh;
+        background-color: rgb(42, 27, 52);
+        background: radial-gradient(ellipse at bottom, #34274b 0%, #1e162d 100%);
+        color: aliceblue;
+        overflow: hidden; }
+</style>
+</head>
+
+<body>
+    <br><br>
+<h1 style="text-align: center; position: relative; left: 50%; transform: translate(-50%, -50%);" >Exemplo de Uso de Funções em HTML</h1>
+    <br>
+<script>
+function saudacao() {
+            return "Olá! Bem-vindo!";
+}
+
+function soma(a, b) {
+        return a + b;
+    }
+        let resultado1 = soma(2,3)
+        console.log(resultado1);
+
+function multiplicacao(a, b) {
+        return a * b;
+    }
+    let resultado2 = multiplicacao(4, 5);
+        console.log(resultado2);
+
+// Saudação
+    console.log(saudacao());
+    document.write("<p>" + saudacao() + "</p><br>");      
+
+// Ou utilize o resultado diretamente no HTML 
+    document.write("<p> O resultado da multiplicação é: " + resultado2 + "</p>");
+    document.write("<p> O resultado da soma é: " + resultado1 + "</p>");
+    
+</script>
+
+<br><br>
+    <button style="position: relative; left: 50%; transform: translate(-50%, -50%);" onclick="fish()">Clique em mim, sou um botão burro</button>
+<br>
+    <div id="fish-container"></div>
+
+<script>
+    // Peixe idiota girando
+
+    function fish() {
+            const fishContainer = document.getElementById("fish-container");
+            fishContainer.innerHTML = "<br><br> <img style='position: relative; left: 50%; transform: translateX(-50%); z-index: -1; width: 350px;  box-shadow: 0 0 15px #ffffff;' src='fish-spinning.gif'><br><a style='text-align: center; position: absolute; left: 50%; transform: translateX(-50%);'> Get fished lol </a>";
+        }
+</script>
+
+<!--
+<br><br> <img style="position: relative; left: 50%; transform: translateX(-50%); z-index: -1; width: 350px;  box-shadow: 0 0 15px #ffffff;" src="fish-spinning.gif">
+        <br>
+    <a style="text-align: center; position: absolute; left: 50%; transform: translateX(-50%);"> Get fished lol </a> 
+-->
+
+</body>
+</html>
